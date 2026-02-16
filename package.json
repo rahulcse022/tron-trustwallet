@@ -12,6 +12,7 @@
   "dependencies": {
     "@tronweb3/tronwallet-adapter-react-hooks": "^1.1.11",
     "@tronweb3/tronwallet-adapter-react-ui": "^1.1.12",
+    "@tronweb3/tronwallet-adapter-trust": "^1.0.2",
     "@tronweb3/tronwallet-adapter-walletconnect": "^3.0.2",
     "@tronweb3/tronwallet-adapters": "^1.2.21",
     "react": "^19.2.0",

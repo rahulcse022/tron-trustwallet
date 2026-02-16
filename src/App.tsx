@@ -1,8 +1,9 @@
-import {  useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { WalletProvider, useWallet } from '@tronweb3/tronwallet-adapter-react-hooks';
 import { WalletModalProvider, WalletActionButton } from '@tronweb3/tronwallet-adapter-react-ui';
 import { WalletConnectAdapter } from '@tronweb3/tronwallet-adapter-walletconnect';
 import { TronLinkAdapter } from '@tronweb3/tronwallet-adapters';
+import { TrustAdapter } from '@tronweb3/tronwallet-adapter-trust';
 import '@tronweb3/tronwallet-adapter-react-ui/style.css';
 import './App.css';
 
@@ -39,12 +40,12 @@ function App() {
       network: 'Mainnet',
       options: {
         relayUrl: 'wss://relay.walletconnect.com',
-        projectId: '0ce8aee287b84db4976604d12ad15af9',
+        projectId: 'YOUR_PROJECT_ID',
         metadata: {
           name: 'Tron WalletConnect App',
           description: 'Tron WalletConnect Integration',
-          url: 'https://tron-trustwallet-v58n.vercel.app',
-          icons: ['https://trustwallet.com/favicon.ico'],
+          url: 'https://your-dapp-url.com',
+          icons: ['https://your-dapp-url.com/icon.png'],
         },
       },
       web3ModalConfig: {
@@ -56,8 +57,9 @@ function App() {
     });
 
     const tronLinkAdapter = new TronLinkAdapter();
+    const trustAdapter = new TrustAdapter();
 
-    return [walletConnectAdapter, tronLinkAdapter];
+    return [walletConnectAdapter, tronLinkAdapter, trustAdapter];
   }, []);
 
   return (
