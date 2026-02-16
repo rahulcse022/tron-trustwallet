@@ -43,8 +43,8 @@ function App() {
         metadata: {
           name: 'Tron WalletConnect App',
           description: 'Tron WalletConnect Integration',
-          url: 'https://your-dapp-url.com',
-          icons: ['https://your-dapp-url.com/icon.png'],
+          url: 'https://tron-trustwallet-v58n.vercel.app',
+          icons: ['https://trustwallet.com/favicon.ico'],
         },
       },
       web3ModalConfig: {
