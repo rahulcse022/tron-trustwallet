@@ -13,7 +13,6 @@ function AppContent() {
   useEffect(() => {
     if (connected && address) {
       console.log(`Connected to Tron network. Address: ${address}`);
-      // "Just after connect" logic here
       alert(`Successfully connected! Address: ${address}`);
     }
   }, [connected, address]);
@@ -23,6 +22,10 @@ function AppContent() {
       <h1>Tron WalletConnect Integration</h1>
       <div className="card">
         <WalletActionButton />
+        <div style={{ fontSize: '12px', marginTop: '10px', color: '#888' }}>
+          <p>For Trust Wallet Mobile, select <strong>WalletConnect</strong>.</p>
+          <p>For Trust Wallet Extension, select <strong>Trust</strong>.</p>
+        </div>
         {connected && (
           <div style={{ marginTop: '20px' }}>
             <p>Connected Wallet: {wallet?.adapter.name}</p>
@@ -57,7 +60,9 @@ function App() {
     });
 
     const tronLinkAdapter = new TronLinkAdapter();
-    const trustAdapter = new TrustAdapter();
+    const trustAdapter = new TrustAdapter({
+        openUrlWhenWalletNotFound: true,
+    });
 
     return [walletConnectAdapter, tronLinkAdapter, trustAdapter];
   }, []);
