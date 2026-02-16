@@ -56,6 +56,12 @@ function App() {
         themeVariables: {
           '--wcm-z-index': '1000',
         },
+        explorerRecommendedWalletIds: [
+          '4622a2b2d6af1c9844944291e5e7351a6aa24cd7b23099efac1b2fd875da31a0', // Trust Wallet
+          'a761af5ebcd8544c20531853d9e4a34b2f6ef57b85e0541703668be510808233', // TronLink (if supported on WC) or other popular ones
+          'c57ca95b47569778a828d19178114f4db188b89b763c899ba0be274e97267d96', // MetaMask (just in case they use it for other chains, though not Tron specific)
+          // Add TokenPocket or others if needed
+        ],
       },
     });
 
