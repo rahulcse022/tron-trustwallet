@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import {  useMemo, useEffect } from 'react';
 import { WalletProvider, useWallet } from '@tronweb3/tronwallet-adapter-react-hooks';
 import { WalletModalProvider, WalletActionButton } from '@tronweb3/tronwallet-adapter-react-ui';
 import { WalletConnectAdapter } from '@tronweb3/tronwallet-adapter-walletconnect';
@@ -40,12 +40,12 @@ function App() {
       network: 'Mainnet',
       options: {
         relayUrl: 'wss://relay.walletconnect.com',
-        projectId: 'YOUR_PROJECT_ID',
+        projectId: '0ce8aee287b84db4976604d12ad15af9',
         metadata: {
           name: 'Tron WalletConnect App',
           description: 'Tron WalletConnect Integration',
-          url: 'https://your-dapp-url.com',
-          icons: ['https://your-dapp-url.com/icon.png'],
+          url: 'https://tron-trustwallet-v58n.vercel.app',
+          icons: ['https://trustwallet.com/favicon.ico'],
         },
       },
       web3ModalConfig: {
